@@ -103,10 +103,6 @@ hs_err_pid*
 .idea/encodings.xml
 .idea/jarRepositories.xml
 .idea/misc.xml
-pom.xml
 ss-core.iml
-ss-gateway/
-ss-member/
-ss-model/
-ss-provder/
-ss-skywalking/
+.idea/*.*
+.idea/*
