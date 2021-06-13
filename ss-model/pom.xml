@@ -10,6 +10,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>ss-model</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>ss-account-model</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>mysql</groupId>
