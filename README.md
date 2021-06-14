@@ -2,7 +2,7 @@
 ss
 
 # Skywalking
--javaagent:D:\IdeaProjects\ss-core\ss-skywalking\agent\skywalking-agent.jar
+-javaagent:F:\Java_work\ss-core\ss-skywalking\agent\skywalking-agent.jar
 -Dskywalking.agent.service_name=ss-member
 -Dskywalking.collector.backend_service=127.0.0.1:11800
 -Dskywalking.lugin.mysql.trace_sql_parameters=true
