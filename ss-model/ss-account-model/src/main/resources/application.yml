@@ -23,13 +23,13 @@ spring:
         exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
 #  cloud:
 #    nacos:
-#      server-addr: 127.0.0.1:8848
+#      server-addr: 108.160.128.50:8848
 #      config:
 #        namespace: a014375a-d057-4853-bd3d-a7cc60c9678f
 #        group: DEFAULT_GROUP
 #      discovery:
 #        namespace: a014375a-d057-4853-bd3d-a7cc60c9678f
-#        server-addr: 127.0.0.1:8848
+#        server-addr: 108.160.128.50:8848
 
 server:
   port: 7895
