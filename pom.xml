@@ -12,8 +12,8 @@
         <module>ss-model</module>
         <module>ss-gateway</module>
         <module>ss-provder</module>
-        <module>ss-member</module>
         <module>ss-common</module>
+        <module>ss-rinko-client</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

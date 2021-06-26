@@ -106,3 +106,4 @@ ss-core.iml
 .idea/*.*
 .idea/*
 */*.iml
+*.iml
