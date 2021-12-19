@@ -3,9 +3,6 @@ package com.rinkoai.common.util;
 import com.alibaba.fastjson.JSONObject;
 import com.rinkoai.common.error.BaseErrorInfoInterface;
 import com.rinkoai.common.error.CommonEnum;
-import org.apache.commons.lang.StringUtils;
-
-import java.util.Objects;
 
 public class R {
 

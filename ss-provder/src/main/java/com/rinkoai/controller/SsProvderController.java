@@ -12,7 +12,7 @@ public class SsProvderController {
     @GetMapping("/test")
     public R getName(String name) {
         SsUser ssUser = new SsUser();
-        ssUser.setUsername(name);
+        ssUser.setName(name);
         return R.success(ssUser);
     }
 }

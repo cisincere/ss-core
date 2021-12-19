@@ -107,3 +107,5 @@ ss-core.iml
 .idea/*
 */*.iml
 *.iml
+/LOG_PATH_IS_UNDEFINEDLOG_FILE_IS_UNDEFINED
+/logs/
