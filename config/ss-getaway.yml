@@ -1,0 +1,36 @@
+server:
+  port: 7897
+spring:
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      config:
+        namespace: a014375a-d057-4853-bd3d-a7cc60c9678f
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: ss-member
+          uri: lb://ss-member
+          predicates:
+            - Path=/api/v1/**
+          filters:
+            - StripPrefix=2
+
+uri:
+  ignore: /api/v1/login,/api/v1/refresh
+  #  /api/v1/user/login, /api/v1/user/refresh 不需要登录
+logging:
+  config: classpath:logback-spring.xml
+  pattern:
+    console: "%date [%level] [%thread] %logger{60} [%file : %line] %msg%n"
+    file: "%date [%level] [%thread] %logger{60} [%file : %line] %msg%n"
+  level:
+    org.springframework.cloud.gateway: debug
+  file:
+    path: logs/
+    name: gateway.log

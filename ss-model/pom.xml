@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>ss-account-model</module>
+        <module>ss-client-model</module>
     </modules>
 <!--    <dependencies>-->
 <!--        <dependency>-->

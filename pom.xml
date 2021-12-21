@@ -25,6 +25,7 @@
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <slf4j-api.version>1.7.25</slf4j-api.version>
         <spring.cloud-version>Hoxton.SR3</spring.cloud-version>
     </properties>
     <dependencies>
@@ -60,6 +61,12 @@
             <artifactId>lombok</artifactId>
             <version>1.18.20</version>
             <optional>true</optional>
+        </dependency>
+        <!-- self4j-->
+        <dependency>
+            <artifactId>slf4j-api</artifactId>
+            <groupId>org.slf4j</groupId>
+            <version>${slf4j-api.version}</version>
         </dependency>
     </dependencies>
     <dependencyManagement>

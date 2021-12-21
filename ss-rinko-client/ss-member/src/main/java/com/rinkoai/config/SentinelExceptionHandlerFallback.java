@@ -15,6 +15,6 @@ public class SentinelExceptionHandlerFallback implements FallbackFactory<SsConsu
     @Override
     public SsConsumService create(Throwable throwable) {
         logger.error("发生业务异常，{}", throwable.getMessage());
-        return name -> R.error(CommonEnum.SERVER_BUSY);
+        return user -> R.error(CommonEnum.SERVER_BUSY);
     }
 }
