@@ -1,0 +1,47 @@
+server:
+  port: 9888
+
+spring:
+  application:
+    name: ss-minor-planet-provder
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  cloud:
+    nacos:
+      server-addr: localhost:8848
+      config:
+        namespace: a014375a-d057-4853-bd3d-a7cc60c9678f
+        group: dev
+      discovery:
+        namespace: a014375a-d057-4853-bd3d-a7cc60c9678f
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: Rinko@21
+      url: jdbc:mysql://192.168.65.169:3306/rinko?serverTimezone=Asia/Shanghai
+      initial-size: 5
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: false
+      filters: stat,wall
+      connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+      use-global-data-source-stat: true
+      stat-view-servlet:
+        login-password: admin
+        login-username: admin
+      web-stat-filter:
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+
+logging:
+  config: classpath:logback-spring.xml
+  pattern:
+    console: "%date [%level] [%thread] %logger{60} [%file : %line] %msg%n"
+    file: "%date [%level] [%thread] %logger{60} [%file : %line] %msg%n"
+  level:
+    root: info
+  file:
+    path: logs/
+    name: ss-minor-planet-provder.log

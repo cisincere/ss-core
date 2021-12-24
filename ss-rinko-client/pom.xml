@@ -13,6 +13,7 @@
     <artifactId>ss-rinko-client</artifactId>
     <modules>
         <module>ss-member</module>
+        <module>ss-planet</module>
     </modules>
     <dependencies>
         <dependency>

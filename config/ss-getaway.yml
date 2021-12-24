@@ -20,6 +20,10 @@ spring:
             - Path=/api/v1/**
           filters:
             - StripPrefix=2
+        - id: ss-planet
+          uri: lb://ss-planet
+          predicates:
+            - Path=/planet/**
 
 uri:
   ignore: /api/v1/login,/api/v1/refresh

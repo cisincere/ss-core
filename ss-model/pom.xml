@@ -14,6 +14,7 @@
     <modules>
         <module>ss-account-model</module>
         <module>ss-client-model</module>
+        <module>ss-minor-planet</module>
     </modules>
 <!--    <dependencies>-->
 <!--        <dependency>-->

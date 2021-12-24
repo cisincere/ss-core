@@ -14,8 +14,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 @Component
 public class AuthGatewayFilter implements GlobalFilter, Ordered {
@@ -27,8 +29,8 @@ public class AuthGatewayFilter implements GlobalFilter, Ordered {
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         String url = exchange.getRequest().getURI().getPath();
         if (!ignoreUrl.contains(url)) {
-            String token = exchange.getRequest().getQueryParams().getFirst("token");
-            if (token == null || token.isEmpty()) {
+            List<String> result = exchange.getRequest().getHeaders().get("ss-token");
+            if (Objects.isNull(result) || result.size() <= 0) {
                 ServerHttpResponse response = exchange.getResponse();
                 Map<Object, Object> map = Maps.newHashMap();
                 map.put("code", 401);
