@@ -10,7 +10,7 @@ public enum CommonEnum implements BaseErrorInfoInterface {
     SERVER_BUSY("503", "服务器正忙，请稍后再试!"),
 
     // 行星错误定义
-    PLANET_NOT_FOUND("2404", "小行星不存在!")
+    PLANET_NOT_FOUND("2404", "小行星不存在!"),
     ;
 
     /**
